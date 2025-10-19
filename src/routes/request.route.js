@@ -10,3 +10,20 @@ router.get("/getAllRequests",verifyToken, getRequests);
 router.get("/getRequest/:id",verifyToken,getRequest);
 
 export default router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

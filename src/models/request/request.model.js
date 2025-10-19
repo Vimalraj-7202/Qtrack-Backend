@@ -2,27 +2,47 @@ import mongoose from "mongoose";
 
 const requestSchema = new mongoose.Schema(
   {
-    year: {
+    Fyear: {
       type: String,
       required: true,
     },
-    period: {
+    Month: {
       type: String,
       required: true,
     },
-    amount: {
+    QC: {
       type: String,
       required: true,
     },
-    name: {
+    Plant: {
       type: String,
       required: true,
     },
-    userId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+    Division: {
+      type: String,
       required: true,
-    }
+    },
+    Category: {
+      type: String,
+      required: true,
+    },
+    QTCode: {
+      type: String,
+      required: true,
+    },
+    Location: {
+      type: String,
+      required: true,
+    },
+    State: {
+      type: String,
+      required: true,
+    },
+    Amount: {
+      type: Number,
+      required: true,
+    },
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
   },
   {
     timestamps: true,

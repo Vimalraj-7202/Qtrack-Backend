@@ -15,9 +15,8 @@ export const newRequest = async (req, res) => {
     const userId = getUserId(req);
     const request = await createRequest({ ...req.body, userId });
     res.status(200).json({
-      success: true,
       message: "Request created successfully",
-      data: request,
+      data: request
     });
   } catch (err) {
     res.status(400).json({ success: false, message: err.message });
@@ -31,7 +30,6 @@ export const editRequest = async (req, res) => {
     const request = await updateRequest(req.params.id, req.body, userId);
 
     res.status(200).json({
-      success: true,
       message: "Request updated successfully",
       data: request,
     });
@@ -61,7 +59,7 @@ export const getRequests = async (req, res) => {
     const userId = getUserId(req);
     const requests = await getAllRequest(userId);
 
-    res.status(200).json({ success: true, data: requests });
+    res.status(200).json(requests);
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
